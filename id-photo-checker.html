@@ -394,6 +394,18 @@ button.act.fbtn{padding:7px 14px;font-size:12.5px;border-radius:999px;font-weigh
 button.act.fbtn.on{border-color:var(--accent);background:rgba(109,123,255,.16);color:var(--accent)}
 .fbtnAll{flex:1 1 auto;min-width:0}
 
+/* upload control bar: document type + "add next shot as" in one tidy row */
+.ctrlbar{display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap;
+  background:var(--panel2);border:1px solid var(--line);border-radius:12px;
+  padding:11px 16px;margin:10px 0 4px}
+.ctrlg{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.clbl{font-size:11.5px;color:var(--dim);font-weight:700;letter-spacing:.03em;
+  text-transform:uppercase;white-space:nowrap}
+.cbtns{display:inline-flex;gap:6px;flex-wrap:wrap}
+.cbtns button.act{padding:8px 14px;font-size:13px;border-radius:999px;font-weight:600}
+.csep{width:1px;align-self:stretch;background:var(--line)}
+@media(max-width:600px){.csep{width:100%;height:1px;flex-basis:100%}}
+
 </style>
 </head>
 <body>
@@ -418,19 +430,26 @@ button.act.fbtn.on{border-color:var(--accent);background:rgba(109,123,255,.16);c
 <div id="paneFile">
   <div class="panel">
     <h2 style="margin-bottom:6px">Add your document</h2>
-    <p class="note" style="text-align:center;margin:2px 0 10px">Pick what you are uploading so the right slots appear — then <b>tap a box</b> (or its <b>Browse files</b> button), <b>drag &amp; drop</b> a photo in, or <b>paste</b> with <kbd>Ctrl</kbd>+<kbd>V</kbd>.</p>
-    <div class="row" style="justify-content:center;gap:8px;flex-wrap:wrap">
-      <span class="note" style="margin:0">Document type:</span>
-      <button class="act dmbtn" data-dm="dl">Licence / state ID</button>
-      <button class="act dmbtn" data-dm="passport">Passport</button>
-      <button class="act dmbtn" data-dm="greencard">Green card</button>
+    <p class="note" style="text-align:center;margin:2px 0 10px">Pick what you're uploading, then add the photos. <b>Tap a box</b> (or its <b>Browse files</b> button), <b>drag &amp; drop</b>, or <b>paste</b> with <kbd>Ctrl</kbd>+<kbd>V</kbd>.</p>
+    <div class="ctrlbar">
+      <div class="ctrlg">
+        <span class="clbl">Document type</span>
+        <span class="cbtns">
+          <button class="act dmbtn" data-dm="dl">Licence / state ID</button>
+          <button class="act dmbtn" data-dm="passport">Passport</button>
+          <button class="act dmbtn" data-dm="greencard">Green card</button>
+        </span>
+      </div>
+      <div class="csep" role="separator"></div>
+      <div class="ctrlg">
+        <span class="clbl">Add the next shot as</span>
+        <span class="cbtns">
+          <button class="act" id="pickFront">Front</button>
+          <button class="act" id="pickBack">Back</button>
+        </span>
+      </div>
     </div>
-    <div class="note" id="modeNote" style="text-align:center;margin-top:8px"></div>
-    <div class="row" style="justify-content:center;gap:8px;flex-wrap:wrap;margin-top:10px">
-      <span class="note" style="margin:0">Add the next shot as:</span>
-      <button class="act" id="pickFront">Front</button>
-      <button class="act" id="pickBack">Back</button>
-    </div>
+    <div class="note" id="modeNote" style="text-align:center;margin:8px 0 2px"></div>
     <div class="uploadstatus" id="uploadStatus" role="status" aria-live="polite"></div>
     <div class="two">
       <div class="slot" id="slotFront">
