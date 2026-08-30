@@ -1,0 +1,11 @@
+# scratch / local-only files — keep the repo clean
+id-photo-checker.backup.html
+_logic.js
+_test.js
+_srv.js
+_pick2.js
+_preview_server.py
+uploads/
+*.tmp
+*.log
+.DS_Store
