@@ -1,4 +1,4 @@
-# ID Photo Checker
+# MonochromeVibe AI
 
 A fully **client-side** tool that pre-checks a **US** driving licence, state ID, passport, or
 permanent resident (green) card photo before you submit it for identity verification. It runs
@@ -123,7 +123,7 @@ Rebranded clone of the original tool, then upgraded into a full Persona-style pr
 
 | Original | This copy |
 |---|---|
-| Title / heading: "CICIO ID CONFIGURATION" | "ID Photo Checker" |
+| Title / heading: "CICIO ID CONFIGURATION" | "MonochromeVibe AI" |
 | Guidance file: `CICIOXL.html` | `id-photo-checker.html` |
 | Netlify AI-builder marketing comments/meta | removed |
 | Cloudflare analytics beacon + challenge script | removed (not ours to ship) |

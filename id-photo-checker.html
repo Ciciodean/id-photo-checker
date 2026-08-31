@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<!-- ID Photo Checker -- a fully client-side document photo verifier.
+<!-- MonochromeVibe AI -- a fully client-side document photo verifier.
      Runs entirely in the browser; nothing is uploaded or stored. -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ID Photo Checker &mdash; US ID, passport &amp; green card checker</title>
+<title>MonochromeVibe AI &mdash; US ID, passport &amp; green card checker</title>
 <meta name="description" content="Check US driving licence, state ID, passport and permanent resident (green) card photos before you submit. Reads the barcode and machine-readable zone, validates the data against the genuine US document format, and lists every reason a verifier would refuse it.">
 <meta name="theme-color" content="#0e1116">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ID Photo Checker &mdash; US ID, passport &amp; green card checker">
+<meta property="og:title" content="MonochromeVibe AI &mdash; US ID, passport &amp; green card checker">
 <meta property="og:description" content="Check US driving licence, state ID, passport and permanent resident (green) card photos before you submit. Reads the barcode and machine-readable zone, validates the data against the genuine US document format, and lists every reason a verifier would refuse it.">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%230e1116'/%3E%3Crect x='9' y='16' width='46' height='33' rx='5' fill='none' stroke='%234493f8' stroke-width='3.5'/%3E%3Ccircle cx='23' cy='29' r='5.5' fill='%234493f8'/%3E%3Cpath d='M14 44c2-6 5.5-8 9-8s7 2 9 8z' fill='%234493f8'/%3E%3Crect x='37' y='24' width='13' height='3' rx='1.5' fill='%239aa7b4'/%3E%3Crect x='37' y='31' width='13' height='3' rx='1.5' fill='%239aa7b4'/%3E%3Crect x='37' y='38' width='8' height='3' rx='1.5' fill='%239aa7b4'/%3E%3C/svg%3E">
@@ -410,7 +410,7 @@ button.act.fbtn.on{border-color:var(--accent);background:rgba(109,123,255,.16);c
 </head>
 <body>
 
-<h1>ID Photo Checker</h1>
+<h1>MonochromeVibe AI</h1>
 <div class="scope">US documents only &nbsp;·&nbsp; driving licences &nbsp;·&nbsp; state ID cards &nbsp;·&nbsp; passports &nbsp;·&nbsp; passport cards &nbsp;·&nbsp; permanent resident (green) cards</div>
 <div class="privacy"><b>Private by design.</b> Every check runs in this browser tab. Your document and everything read from it stay on your device &mdash; nothing is uploaded, sent to a server, or stored anywhere. This page works because it never needs to.</div>
 <div class="trustbar">
@@ -3973,7 +3973,7 @@ function exportReport(){
   var d=buildReportData();
   var t=d.decision==="ready"? "Ready to submit" : d.decision==="review"? "Review needed" : "Not ready";
   var confCss = d.conf>=70? "#3fb950" : d.conf>=45? "#d29922" : "#f85149";
-  var s="<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><title>ID Photo Checker \u2014 verification report</title>"+
+  var s="<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><title>MonochromeVibe AI \u2014 verification report</title>"+
     "<style>body{font:14px/1.5 -apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0e1116;color:#e6edf3;max-width:860px;margin:30px auto;padding:20px}"+
     "h1{font-size:18px;margin:0 0 2px}.dim{color:#9aa7b4;font-size:12.5px}"+
     ".banner{border-radius:12px;padding:16px;text-align:center;border:1px solid "+(d.decision==="ready"?"#3fb950":d.decision==="review"?"#d29922":"#f85149")+"}"+
@@ -3982,7 +3982,7 @@ function exportReport(){
     ".st .nm{font-weight:700}.conf{margin:8px 0}.conf .ctx{color:#9aa7b4}.track{height:8px;background:#161b22;border:1px solid #2a323d;border-radius:5px;margin-top:4px}.track i{display:block;height:100%;background:"+confCss+";width:"+d.conf+"%}"+
     "table{width:100%;border-collapse:collapse;margin-top:14px;font-size:13px}th{text-align:left;color:#9aa7b4;border-bottom:1px solid #2a323d}td{padding:6px 8px;border-bottom:1px solid #2a323d;vertical-align:top}"+
     ".fr{color:#9aa7b4;font-size:12px}.note{color:#9aa7b4;font-size:12px;margin-top:18px;border:1px solid #3fb950;border-radius:10px;padding:10px;background:rgba(63,185,80,.06)}</style></head><body>"+
-    "<h1>ID Photo Checker \u2014 verification report</h1><div class=\"dim\">Generated in your browser \u00b7 document never uploaded or stored</div>"+
+    "<h1>MonochromeVibe AI \u2014 verification report</h1><div class=\"dim\">Generated in your browser \u00b7 document never uploaded or stored</div>"+
     "<div class=\"banner\"><div class=\"rt\">"+t+"</div><div class=\"rm\">"+(d.decision==="ready"?"Nothing a capture can fix remains.":d.decision==="review"?"A few items raise the odds of a rejection.":d.fails.length+" blocking item(s).")+"</div></div>"+
     "<div class=\"stages\">"+PHASES.map(function(ph,i){var st=d.phases[i];return "<div class=\"st\"><div class=\"nm\">"+ph.n+"</div><div class=\"dim'>"+st.label+"</div></div>";}).join("")+"</div>"+
     "<div class=\"conf\"><div class=\"ctx\">On-device confidence: <b>"+d.conf+"%</b></div><div class=\"track\"><i></i></div></div>"+
